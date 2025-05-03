@@ -68,9 +68,10 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
   }
 
-  .service_section .service_container {
-    flex-wrap: wrap;
-  }
+  .alt_services_container .alt_services_container .alt_box {
+        flex-basis: 100%;
+        margin: 2% 0;
+    }
 
   .client_section .carousel_btn-box {
     margin-top: 25px;

@@ -444,46 +444,110 @@ a:focus {
 // end about section
 
 // service section
+.alt_services_section {
+  .alt_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-.service_section {
-  background-color: $primary1;
-
-  .heading_container {
-    color: $white;
-  }
-
-  .box {
-    background-color: $white;
-    padding: 25px 15px;
-    text-align: center;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 45px;
-
-    .img-box {
-      svg {
-        width: 75px;
-        height: auto;
-        fill: $primary1;
-      }
-    }
-
-    .detail-box {
-      margin-top: 25px;
+    .alt_box {
+      position: relative;
+      color: $white;
+      margin: 1%;
+      flex-basis: 48%; // Two items per row
+      overflow: hidden;
+      z-index: 1;
 
       h6 {
-        font-size: 18px;
         font-weight: bold;
         text-transform: uppercase;
-        margin-bottom: 20px;
       }
 
-      a {
-        @include hero_btn($primary2, $white, 8px, 35px);
-        margin-top: 10px;
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .alt_visible_heading {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 2;
+      }
+
+      .alt_link_box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 45px;
+          border-radius: 100%;
+          background-color: $primary;
+
+          img {
+            width: 20px;
+          }
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+
+        h6 {
+          margin-top: 15px;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(#43117d, 0.9);
+        display: none;
+        z-index: 2;
+        pointer-events: none; // Prevent blocking hover
+      }
+
+      &:hover {
+        .alt_link_box {
+          display: flex;
+        }
+
+        &::before {
+          display: block;
+        }
+
+        .alt_visible_heading {
+          display: none;
+        }
+      }
+      &:hover {
+        .alt_link_box {
+          display: flex;
+        }
+    
+        &::before {
+          display: block;
+        }
       }
     }
   }
 }
+
 
 // end service section
 
