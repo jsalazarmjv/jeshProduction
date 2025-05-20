@@ -5,6 +5,8 @@ body {
   background-color: #ffffff;
 }
 
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -92,7 +94,7 @@ html, body {
   content: "";
   width: 40px;
   height: 7px;
-  background-color: #f1db25;
+  background-color: #000000;
   border-radius: 10px;
   position: absolute;
   bottom: 0;
@@ -133,21 +135,28 @@ html, body {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero_bg_box .img-box {
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.hero_bg_box .img-box img {
+.hero_bg_box .img-box video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .hero_bg_box::before {
@@ -157,9 +166,10 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.35)));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.35));
+  z-index: 1;
 }
+
 
 .sub_page .hero_area {
   min-height: auto;
@@ -408,7 +418,7 @@ a:focus {
 }
 
 .slider_section .detail-box h1 span {
-  color: #f1db25;
+  color: #ffffff;
 }
 
 .slider_section .detail-box p {
@@ -498,7 +508,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn-2 {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: #ffffff;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -507,8 +517,8 @@ a:focus {
 
 .slider_section .detail-box ;.btn-box .btn-2:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .slider_section .img-box {
@@ -574,7 +584,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: #ffffff;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -584,8 +594,8 @@ a:focus {
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 
@@ -682,6 +692,20 @@ a:focus {
   left: initial;
   right: 0;
 }
+
+.client_section {
+  background-color: #000; /* Black background */
+  color: #fff;            /* White default text */
+  padding: 60px 0;        /* Optional: give it breathing room */
+}
+
+.client_section .heading_container h2,
+.client_section .box .detail-box h4,
+.client_section .box .detail-box h5,
+.client_section .box .detail-box p {
+  color: #fff; /* Ensure all text is white */
+}
+
 
 /* contact section */
 .contact_section {
@@ -817,7 +841,16 @@ a:focus {
 
 .team_section .box .img-box {
   width: 100%;
+    background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 60px 0;
 }
+.team_section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 0;
+}
+
 
 .team_section .box .img-box img {
   width: 100%;
@@ -846,7 +879,7 @@ a:focus {
 .team_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #f1db25;
+  background-color: #ff0800;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -855,8 +888,8 @@ a:focus {
 
 .team_section .btn-box a:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #ff0000;
+  color: #ff0000;
 }
 
 .info_section {
@@ -990,8 +1023,12 @@ a:focus {
 
 
 .result_section {
+  color: #000000;
+  background-color: #faf8f8;
+}
+.result_section2 {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #060606;
 }
 
 .result_section .row {
@@ -1023,7 +1060,7 @@ a:focus {
   width: 40px;
   height: 7px;
   border-radius: 10px;
-  background-color: #f8bc1a;
+  background-color: #ffffff;
 }
 
 .result_section .detail-box p {
@@ -1176,20 +1213,27 @@ a:focus {
 }
 /* Main Section */
 .alt_services_section {
-  padding: 40px 0;
-  background-color: #f8f8f8;
+  height: 100vh;            /* Make section full screen height */
+  display: flex;            /* Use flex to center content */
+  flex-direction: column;  
+  justify-content: center;  /* Vertically center */
+  align-items: center;      /* Horizontally center if desired */
+  overflow: auto;           /* Allows scroll if content overflows */
+  background-color: #ffffff;   /* Optional: set background color */
+  color: #000000;              /* Optional: make text visible on dark bg */
 }
 
 .alt_layout_paddings {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0; /* Optional: Remove padding if causing overflow */
 }
 
-/* Container */
 .alt_container {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  padding: 20px; /* Keep some internal spacing */
 }
+
+
 
 /* Heading */
 .alt_heading_container h2 {
@@ -1199,6 +1243,8 @@ a:focus {
   color: #333;
   margin-bottom: 30px;
 }
+
+
 
 /* Service Boxes */
 .alt_services_container {
@@ -1215,6 +1261,7 @@ a:focus {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 
 .alt_box img {
   width: 100%;
@@ -1269,10 +1316,55 @@ a:focus {
   }
 }
 
+.experience-section {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 100%;
+  color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.experience-left,
+.experience-right {
+  flex: 1 1 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.experience-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.experience-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.experience-years {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+
+
+.experience-years span {
+  font-weight: 600;
+}
+
+
 @media (max-width: 480px) {
   .alt_services_container {
     grid-template-columns: 1fr; /* One item per row on small screens */
   }
+  
   .alt_heading_container h2 {
     font-size: 28px;
   }
@@ -1281,6 +1373,126 @@ a:focus {
   }
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.result_section2 {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.result_section2 .container-fluid {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-row,
+.bottom-row {
+  flex: 1 1 50%;          /* each take exactly half */
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.top-row {
+  background-color: #fff; /* white bg */
+  color: #000;            /* black text */
+}
+
+.bottom-row {
+  background-color: #000; /* black bg */
+  color: #fff;            /* white text */
+  flex-direction: column;
+  
+}
+
+.top-row h2 {
+  font-weight: 700;
+  font-size: 5.5rem; /* increased font size */
+  margin: 0 auto;
+
+}
+
+.top-row p {
+  font-weight: 600;
+  font-size: 1.8rem; /* increased font size */
+  margin: 0 0 15px;
+}
+
+.vendor-icon {
+  max-height: 300px; /* doubled icon height */
+  width: auto;
+  filter: none;
+}
+
+.bottom-row p.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.btn-3 {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #1e90ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-3:hover,
+.btn-3:focus {
+  background-color: #0056b3;
+  outline: none;
+  color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+  .top-row h2 {
+    font-size: 2rem;
+
+  }
+
+.red-text {
+  color: red;
+}
+
+.black-text {
+  color: black;
+}
+
+  .smaller{
+    font-size: 1.5rem;
+  }
+
+  .top-row,
+  .bottom-row {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .bottom-row p.lead {
+    font-size: 1rem;
+  }
+}
 
 
   .custom_page_wrapper {
