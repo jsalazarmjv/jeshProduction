@@ -495,7 +495,8 @@ a:focus {
   border: 1px solid #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  margin-left: 10px;
+  margin-top: 15px;
+
 }
 
 .btn-box .btn-2:hover {
@@ -1037,6 +1038,8 @@ a:focus {
           align-items: center;
 }
 
+
+
 .result_section .img-box img {
   width: 100%;
 }
@@ -1086,6 +1089,34 @@ a:focus {
   overflow: hidden;
 }
 
+@media (max-width: 576px) {
+  .result_section .img-box {
+    height: auto; /* Let video/image define height */
+  }
+
+  .result_section .img-box video {
+    object-fit: contain; /* Prevent cropping */
+    height: auto;
+    max-height: 300px; /* Optional */
+  }
+
+  .result_section .img-box img {
+    object-fit: contain;
+    height: auto;
+    max-height: 300px; /* Optional */
+  }
+}
+
+  .result_section .img-box video,
+  .result_section .img-box img {
+     width: 100%;
+  height: 100%;
+    object-fit: cover;
+  display: block;
+  }
+}
+
+
 .result_section .img-box img {
   object-fit: cover;
   width: 100%;
@@ -1125,6 +1156,59 @@ a:focus {
   border-color: #000000;
   color: #000000;
 }
+
+.result_equal_height .container-fluid {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.result_equal_height .top-row,
+.result_equal_height .bottom-row {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.result_equal_height .top-row > div {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 576px) {
+  .result_equal_height .container-fluid {
+    height: auto;
+  }
+
+  .result_equal_height .top-row,
+  .result_equal_height .bottom-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .result_equal_height .top-row > div {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .result_section h2 span:first-child {
+    font-size: 3.5rem; /* Increase as needed */
+    font-weight: bold; /* Optional for emphasis */
+  }
+}
+
+
 
 .features_section .features_container {
   display: -webkit-box;
@@ -1465,10 +1549,12 @@ html, body {
 
 /* Responsive */
 
+
+
+
 @media (max-width: 767.98px) {
   .top-row h2 {
-    font-size: 2rem;
-
+    font-size: 3rem;
   }
 
 .red-text {
