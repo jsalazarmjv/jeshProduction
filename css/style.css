@@ -457,11 +457,24 @@ a:focus {
   display: inline-block;
   padding: 10px 35px;
   background-color: #ff0033;
-  color: #000000;
+  color: #fdfdfd;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  border-radius: 30px;
   border: 1px solid transparent;
 }
+
+.btn-4 {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 35px;
+  background-color: #ff0033;
+  color: #fdfdfd;
+  transition: all 0.3s;
+  border-radius: 30px;
+  border: 1px solid transparent;
+}
+
 
 .btn-box .btn-1:hover {
   background-color: transparent;
@@ -473,10 +486,11 @@ a:focus {
   display: inline-block;
   padding: 10px 35px;
   background-color: #ff0033;
-  color: #000000;
+  color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
+  
 
 }
 
@@ -496,6 +510,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   margin-top: 15px;
+  border-radius: 30px;
 
 }
 

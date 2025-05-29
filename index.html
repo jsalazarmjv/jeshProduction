@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="icon" href="/favicon.icon" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -31,6 +31,18 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
+<!-- ... All your form and page content here ... -->
+
+<!-- EmailJS Library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  // Initialize EmailJS with your public key
+  (function () {
+    emailjs.init("z3Yal0HbT0TTzcwNQ"); // Replace with your actual public key
+  })();
+</script>
+
 
 <body>
   <div class="hero_area">
@@ -469,7 +481,7 @@
           <h2 class="mb-4 text-center" data-aos="fade-up"><br><br>
             Tell us your idea. <br> We are here to help!</h2>
 
-          <form action="#" method="post" class="contact-form" role="form" data-aos="fade-up">
+          <form id="contact-form" class="contact-form" role="form" data-aos="fade-up">
 
             <div class="row">
 
@@ -519,12 +531,17 @@
               </div>
             </div>
 
-            <div class="col-lg-5 col-12 mx-auto mt-5">
-              <button type="submit" class="form-control">Send Message</button>
+            <br>
               <div class="btn-box">
-
+                  <button type="submit" class="btn-4">Send Message</button>
               </div>
           </form>
+
+          <div id="form-success" style="display: none; text-align: center; padding: 20px; border: 2px solid #eee; border-radius: 10px; margin-top: 20px;">
+  <img src="https://img.icons8.com/color/96/000000/ok--v1.png" alt="Success" style="width: 60px; margin-bottom: 10px;">
+  <p style="color: #040000;">Your submission has been received!</p>
+</div>
+
           <br><br>
         </div>
 
@@ -604,6 +621,46 @@
 
   </footer>
   <!-- footer section -->
+
+<!-- your entire HTML content -->
+
+<!-- Place this just before the closing </body> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init("z3Yal0HbT0TTzcwNQ"); // your public key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const checkbox1 = document.getElementById("checkbox1").checked ? "Video" : "";
+    const checkbox2 = document.getElementById("checkbox2").checked ? "Photography" : "";
+
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+      services: [checkbox1, checkbox2].filter(Boolean).join(", ")
+    };
+
+emailjs.send("service_ak52dpr", "template_kxay1mj", formData)
+  .then(function () {
+    // Show success message
+    document.getElementById("form-success").style.display = "block";
+
+    // Optionally scroll to it
+    document.getElementById("form-success").scrollIntoView({ behavior: "smooth" });
+
+    // Reset the form
+    document.getElementById("contact-form").reset();
+  }, function (error) {
+    alert("Failed to send message.\n" + JSON.stringify(error));
+  });
+
+  });
+</script>
+
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
