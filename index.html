@@ -15,6 +15,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
   <title>Jesh Production</title>
@@ -53,9 +55,13 @@
       </div>
     </div>
 
+<!-- Floating clock icon -->
+<a href="#home" class="scroll-to-top" title="Go to Home">
+  <i class="fas fa-caret-up"></i> <!-- Requires Font Awesome -->
+</a>
 
 
-    <header class="header_section">
+    <header id="home" class="header_section"> 
       <div class="header_top">
         <div class="container-fluid">
           <div class="contact_link-container">
@@ -65,13 +71,13 @@
                 Based in Las Vegas
               </span>
             </a>
-            <a href="" class="contact_link2">
+            <a href="sms:18185999211" class="contact_link2">
               <i class="fa fa-comments" aria-hidden="true"></i>
               <span>
                 Text : (818) 599 9211
               </span>
             </a>
-            <a href="" class="contact_link3">
+            <a href="mailto:jsalazarmjv@gmail.com" class="contact_link3">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
                 jsalazarmjv@gmail.com
@@ -91,22 +97,25 @@
               <span class=""></span>
             </button>
 
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <div  class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="#about"> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Services </a>
+                  <a class="nav-link" href="#services"> Services </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="guard.html"> Why us </a>
+                  <a class="nav-link" href="#gallery"> Gallery </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
+                  <a class="nav-link" href="#reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -117,6 +126,7 @@
     <!-- end header section -->
     <!-- slider section -->
     <section class="hero_section d-flex align-items-center justify-content-center text-center"
+
       style="min-height: 100vh;">
       <div class="container">
         <div class="row justify-content-center">
@@ -132,8 +142,8 @@
 
               </p>
               <div class="btn-box mt-4">
-                <a href="#" class="btn-1">Get a FREE quote</a>
-                <a href="#" class="btn-2">Explore our Services</a>
+                <a href="#contact" class="btn-1">Get a FREE quote</a>
+                <a href="#gallery" class="btn-2">Explore our Services</a>
               </div>
             </div>
           </div>
@@ -145,7 +155,7 @@
   </div>
 
   <!-- about section -->
-  <section class="result_section result_equal_height">
+  <section id="about" class="result_section result_equal_height">
     <div class="container-fluid p-0 h-100 d-flex flex-column">
 
       <!-- Top row: white bg, black text -->
@@ -172,7 +182,7 @@
           </p>
 
           <div class="btn-box mt-4">
-            <a href="#" class="btn-3">Let's chat</a><br><br>
+            <a href="#contact" class="btn-3">Let's chat</a><br><br>
           </div>
         </div>
       </div>
@@ -187,7 +197,7 @@
 
   <!-- service section -->
   <!-- una imagen a la izquierda, texto a la derecha (video) -->
-  <section class="result_section">
+  <section id="services" class="result_section">
     <div class="container-fluid">
       <div class="row video-row"> <!-- ADD THIS CLASS -->
         <div class="col-md-6 px-0">
@@ -262,7 +272,7 @@
             </div>
           </div>
           <div class="btn-box">
-            <a href="" class="btn-3">
+            <a href="#contact" class="btn-3">
               Let’s do it
             </a>
           </div>
@@ -277,99 +287,9 @@
 
       <!-- service section -->
       <!-- service section -->
-      <section class="alt_services_section alt_layout_paddings">
-        <div class="alt_container">
-          <div class="alt_heading_container">
-            <h2>Gallery — Take a look of our work.</h2>
-          </div>
+   
 
-          <div class="custom_services_container">
-            <!-- Albums 1–9 -->
-            <!-- Use loop in template engine or copy/paste to scale -->
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 1</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 1</h6>
-              </div>
-            </div>
 
-            <!-- Repeat with correct numbers -->
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 2</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 2</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 3</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 3</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 4</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 4</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 5</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 5</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 6</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 6</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 7</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 7</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 8</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 8</h6>
-              </div>
-            </div>
-
-            <div class="custom_box">
-              <img src="images/albums.jpg" alt="">
-              <h6 class="custom_visible_heading">ALBUM 9</h6>
-              <div class="custom_link_box">
-                <a href="#"><img src="images/link.png" alt=""></a>
-                <h6>ALBUM 9</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- end service section -->
@@ -384,7 +304,128 @@
   </section>
   <!-- client section -->
 
-  <section class="client_section layout_padding">
+
+  <!-- Gallery section -->
+    <section id="gallery" class="gallery-section full-width">
+  <div class="gallery-heading">
+    <h2>Gallery </h2>
+    <h2>Take a look at our work.</h2>
+  </div>
+<br><br>
+  <div class="gallery-grid">
+    <!-- Repeatable cards -->
+
+    
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 1">
+         <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 1</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 2">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 2</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 3">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 3</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 4">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 4</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 5">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 5</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 6">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 6</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 7">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 7</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 8">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 8</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <div class="gallery-image-wrapper">
+        <img src="images/albums.jpg" alt="Album 9">
+        <div class="play-icon">&#9658;</div>
+      </div>
+      <div class="gallery-text">
+        <h6><a href="#">Gallery 9</a></h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum orci sit amet dignissim.</p>
+      </div>
+    </div>
+
+    <!-- ... more cards ... -->
+  </div>
+</section>
+
+  <section id="reviews" class="client_section layout_padding">
     <div class="container ">
       <div class="heading_container heading_center">
         <h2>
@@ -471,7 +512,7 @@
   <!-- end client section -->
 
   <!-- contact section -->
-  <section class=" contact section-padding" id="contact">
+  <section id="contact" class=" contact section-padding" id="contact">
     <div class="container">
       <div class="row">
 
@@ -555,56 +596,66 @@
   <!-- end team section -->
 
   <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_logo">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Our Vision
-              </span>
-            </a>
-            <p>
-              To be a creative production company, known for delivering great quality and innovative storytelling that
-              exceeds our client expectations. </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_links">
-            <h5>
-              Our Mission
-            </h5>
-            <p>Our mission is to honor God in everything we do, that commintment represents honesty and excellence
-              towards every work we do.</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Contact Us
-            </h5>
-          </div>
-          <div class="info_contact">
+  <section class="info_section">
+  <div class="container">
+    <div class="row">
+      
+     
 
-            <a href="" class="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Text : (818) 599 9211
-              </span>
-            </a>
-            <a href="" class="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                jsalazarmjv@gmail.com
-              </span>
-            </a>
-          </div>
+      <!-- Mission Column -->
+      <div class="col-md-3">
+        <div class="info_logo">
+          <span><strong>Our Mission</strong></span>
+          <p>
+            Our mission is to honor God in everything we do. That commitment represents honesty and excellence
+            in every project we undertake.
+          </p>
         </div>
-
       </div>
+
+      <!-- Vision Column -->
+      <div class="col-md-3">
+        <div class="info_logo">
+          <span><strong>Our Vision</strong></span>
+          <p>
+            To be a creative production company known for delivering high-quality, innovative storytelling that
+            exceeds client expectations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="col-md-3">
+        <div class="info_logo">
+          <span><strong>Contact Us</strong></span>
+        </div>
+        <div class="info_contact">
+          <a href="tel:18185999211">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>Text: (818) 599 9211</span>
+          </a>
+          <a href="mailto:jsalazarmjv@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>jsalazarmjv@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+
+       <!-- Logo Column -->
+      <div class="col-md-3">
+        <div class="info_logo">
+          <a class="navbar-brand" href="index.html">
+            <!-- Replace 'logo.png' with your actual logo path -->
+            <img src="images/jeshLogo.png" alt="Logo" style="max-width: 200px;">
+          </a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- end info_section -->
 
@@ -664,6 +715,9 @@ emailjs.send("service_ak52dpr", "template_kxay1mj", formData)
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
+
+
+
 </body>
 
 </html>
