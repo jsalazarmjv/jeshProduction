@@ -608,10 +608,11 @@ a:focus {
   margin: 0 auto;
   padding: 10px 35px;
   background-color: #ff0033;
-  color: #fdfdfd;
+  color: #ffffff;
   transition: all 0.3s;
   border-radius: 30px;
   border: 1px solid transparent;
+  font-weight: bold;
 }
 
 
