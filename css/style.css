@@ -262,6 +262,14 @@ html, body {
   font-family: 'Arial Black', Gadget, sans-serif;
 }
 
+@media (max-width: 600px) {
+  .text-white {
+    font-weight: bold;
+  }
+}
+
+
+
 .text-wte{
   color: white;
 }
@@ -1787,6 +1795,28 @@ html, body {
 
 
 
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+}
 
 
 
