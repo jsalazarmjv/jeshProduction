@@ -17,8 +17,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-
   <title>Jesh Production</title>
 
   <!-- bootstrap core css -->
@@ -33,6 +31,7 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
 
 <!-- ... All your form and page content here ... -->
 
@@ -303,23 +302,21 @@
 
   </section>
   <!-- client section -->
-
-
-  <!-- Gallery section -->
-    <section id="gallery" class="gallery-section full-width">
+<!-- Gallery section -->
+<section id="gallery" class="gallery-section full-width">
   <div class="gallery-heading">
     <h2>Gallery </h2>
     <h2 style="color: black;">Take a look at our work</h2>
   </div>
-<br><br>
+  <br><br>
   <div class="gallery-grid">
-    <!-- Repeatable cards -->
 
-    
+    <!-- Album 1: GalleryIndoor -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryIndoor/Indoor-2.avif" alt="Album 1">
-         <div class="play-icon">&#9658;</div>
+        <img src="images/GalleryIndoor/Indoor-2.avif" alt="Indoor Events" 
+             onclick="openCarousel('GalleryIndoor')" style="cursor:pointer;">
+        <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
         <h6><a href="#">Indoor Events</a></h6>
@@ -327,9 +324,11 @@
       </div>
     </div>
 
+    <!-- Album 2: GalleryOutdoor -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryOutdoor/Outdoor-1.avif" alt="Album 2">
+        <img src="images/GalleryOutdoor/Outdoor-1.avif" alt="Outdoor Events" 
+             onclick="openCarousel('GalleryOutdoor')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -338,9 +337,11 @@
       </div>
     </div>
 
+    <!-- Album 3: GalleryConcert -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryConcert/Concerts-9.avif" alt="Album 3">
+        <img src="images/GalleryConcert/Concerts-9.avif" alt="Concerts" 
+             onclick="openCarousel('GalleryConcert')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -349,10 +350,11 @@
       </div>
     </div>
 
-
+    <!-- Album 4: GalleryFamily -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryFamily/Family-1.avif" alt="Album 4">
+        <img src="images/GalleryFamily/Family-1.avif" alt="Family Sessions" 
+             onclick="openCarousel('GalleryFamily')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -361,10 +363,11 @@
       </div>
     </div>
 
-
+    <!-- Album 5: GalleryGrad -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryGrad/Grads-4.avif" alt="Album 5">
+        <img src="images/GalleryGrad/Grads-4.avif" alt="Graduations" 
+             onclick="openCarousel('GalleryGrad')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -373,10 +376,11 @@
       </div>
     </div>
 
-
+    <!-- Album 6: GalleryWed -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryWed/Wedding-1.avif" alt="Album 6">
+        <img src="images/GalleryWed/Wedding-1.avif" alt="Weddings" 
+             onclick="openCarousel('GalleryWed')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -385,10 +389,11 @@
       </div>
     </div>
 
-
+    <!-- Album 7: GalleryBDays -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryBDays/Bday-1.avif" alt="Album 7">
+        <img src="images/GalleryBDays/Bday-1.avif" alt="Birthdays" 
+             onclick="openCarousel('GalleryBDays')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -397,10 +402,11 @@
       </div>
     </div>
 
-
+    <!-- Album 8: GalleryRealState -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryRealState/RealState-4.avif" alt="Album 8">
+        <img src="images/GalleryRealState/RealState-4.avif" alt="Construction Updates" 
+             onclick="openCarousel('GalleryRealState')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -409,10 +415,11 @@
       </div>
     </div>
 
-
+    <!-- Album 9: GalleryCorp -->
     <div class="gallery-card">
       <div class="gallery-image-wrapper">
-        <img src="images/GalleryCorp/Corp-1.avif" alt="Album 9">
+        <img src="images/GalleryCorp/Corp-1.avif" alt="Corporate" 
+             onclick="openCarousel('GalleryCorp')" style="cursor:pointer;">
         <div class="play-icon">&#9658;</div>
       </div>
       <div class="gallery-text">
@@ -421,9 +428,32 @@
       </div>
     </div>
 
-    <!-- ... more cards ... -->
   </div>
 </section>
+
+
+
+
+
+<!-- Carousel Overlay -->
+<div id="carouselOverlay" onclick="closeCarousel(event)">
+  <div class="carousel-container" onclick="event.stopPropagation()">
+    <div class="close-btn" onclick="closeCarousel(event)" aria-label="Close Carousel">
+  <span><i class="fas fa-times"></i></span>
+</div>
+
+    <div class="nav-circle nav-left" onclick="prevImage(event)">
+      <img id="prevThumb" src="" alt="Previous thumbnail">
+      <span><i class="fas fa-chevron-left"></i></span>
+    </div>
+    <img id="mainImage" class="carousel-image" src="" alt="Main Image">
+    <div class="nav-circle nav-right" onclick="nextImage(event)">
+      <img id="nextThumb" src="" alt="Next thumbnail">
+      <span><i class="fas fa-chevron-right"></i></span>
+    </div>
+  </div>
+</div>
+
 
   <section id="reviews" class="client_section layout_padding">
     <div class="container ">
