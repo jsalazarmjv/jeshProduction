@@ -1845,15 +1845,21 @@ html, body {
 .close-btn i {
   font-size: 20px;
   color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
 }
 
 
+
+/* Navigation circles */
 /* Navigation circles */
 .nav-circle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1879,4 +1885,8 @@ html, body {
 .nav-circle i {
   color: white;
   font-size: 24px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
 }
