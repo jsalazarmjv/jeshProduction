@@ -264,8 +264,8 @@ html, body {
 
 @media (max-width: 600px) {
   .text-white {
-    font-weight: bold;
-    font-family: 'Arial Black';
+    font-weight: 900;
+    font-family: 'Arial Black', 'Roboto';
   }
 }
 
