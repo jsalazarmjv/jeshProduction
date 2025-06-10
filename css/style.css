@@ -265,7 +265,7 @@ html, body {
 @media (max-width: 600px) {
   .text-white {
     font-weight: bold;
-    font-family: 'Arial Black', Gadget, sans-serif;
+    font-family: 'Arial Black';
   }
 }
 
@@ -1225,13 +1225,6 @@ a:focus {
   position: relative;
   padding-top: 10px;
 }
-
-
-
-
-
-
-
 
 
 .result_section .detail-box h2::before {
