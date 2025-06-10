@@ -64,12 +64,13 @@
       <div class="header_top">
         <div class="container-fluid">
           <div class="contact_link-container">
-            <a href="" class="contact_link1">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Based in Las Vegas
-              </span>
-            </a>
+      <a class="contact_link1" href="https://www.google.com/maps/place/Las+Vegas,+NV" target="_blank" rel="noopener noreferrer">
+  <i class="fa fa-map-marker" aria-hidden="true"></i>
+  <span>
+    Based in Las Vegas
+  </span>
+</a>
+
             <a href="sms:18185999211" class="contact_link2">
               <i class="fa fa-comments" aria-hidden="true"></i>
               <span>
@@ -164,17 +165,25 @@
             <span style="color: red;">11 years</span> <span style="color: black;">of production experience</span>
           </h2>
         </div>
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center px-4">
-          <img src="images/About-1.avif" alt="Vendor Icon" class="vendor-icon"> <br>
-                    <img src="images/About-2.avif" alt="Vendor Icon" class="vendor-icon">
+        </div>
+            <div class="container-fluid">
+      <div class="row video-row"> <!-- ADD THIS CLASS -->
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+             <img src="images/About-1.avif" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+               <img src="images/About-2.avif" alt="">
+          </div>
         </div>
       </div>
-
+    </div>
       <!-- Bottom row: black bg, white text -->
       <div class="row no-gutters bottom-row flex-fill d-flex align-items-center justify-content-center text-center">
         <div class="col-12 col-md-10 px-4">
           <p class="lead"><br>
-
             Whether it’s a family event, a photo session, a promotional video, or a full corporate production; <span style="color: #ff0033;">we transform your idea into reality.</span>
             <br><br>By the way: <em>“También hablamos Español.”</em>
           </p>
@@ -195,28 +204,34 @@
 
   <!-- service section -->
   <!-- una imagen a la izquierda, texto a la derecha (video) -->
-  <section id="services" class="result_section">
-    <div class="container-fluid">
-      <div class="row video-row"> <!-- ADD THIS CLASS -->
-        <div class="col-md-6 px-0">
-          <div class="img-box">
-            <video src="images/ServiceWebVideo.mp4" autoplay muted loop></video>
-          </div>
+<section id="services" class="result_section">
+  <div class="container-fluid">
+    <div class="row video-row">
+      <!-- TEXT FIRST ON PHONE -->
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="detail-box">
+          <br>
+          <h2>
+            <span style="color: #ff0033;  font-size: 3rem;">Video</span><br>
+            Short films that captivate and tell your story.
+          </h2>
+          <p>
+            Events, Weddings, Promos, and More...
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h2>
-              <span style="color: #ff0033;">Video</span><br>
-              Short films that captivate and tell your story.
-            </h2>
-            <p>
-              Events, Weddings, Promos, and More...
-            </p>
-          </div>
+        <br>
+      </div>
+
+      <!-- VIDEO SECOND ON PHONE -->
+      <div class="col-md-6 px-0 order-2 order-md-1">
+        <div class="img-box">
+          <video src="images/ServiceWebVideo.mp4" autoplay muted loop playsinline></video>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- -->
 
@@ -227,8 +242,9 @@
 
         <div class="col-lg-6 col-md-5">
           <div class="detail-box">
+            <br>
             <h2>
-              <span style="color: #ff0033;">Photography</span> <br>
+              <span style="color: #ff0033;  font-size: 3rem;">Photography</span> <br>
               Beautiful images that enhance your ideas.
             </h2>
             <p>
@@ -236,6 +252,7 @@
             </p>
 
           </div>
+          <br>
         </div>
         <div class="col-md-6 px-0">
           <div class="img-box">
@@ -255,7 +272,7 @@
     <div class="container ">
       <div class="heading_container heading_center">
         <h2 class="smaller">
-          Creative Direction <br> <span style="color: #ff0033;">(Included for FREE)</span>
+         Need help shaping your idea? <br> <span style="color: #ff0033;">(We’ll help you for FREE)</span>
         </h2>
       </div>
       <div class="bottom-text-box text-center p-5">
@@ -263,9 +280,7 @@
           <div class="row no-gutters bottom-row flex-fill d-flex align-items-center justify-content-center text-center">
             <div class="col-12 col-md-10 px-4">
               <p class="lead">
-                Need help shaping your idea?
-                We’ll help you for FREE. Receive professional consultation to get the look you want. (A very valuable
-                asset)
+                Receive professional consultation to get the look you want.
               </p>
             </div>
           </div>
@@ -274,6 +289,7 @@
               Let’s do it
             </a>
           </div>
+          <br>
         </div>
       </div>
 
