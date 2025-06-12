@@ -86,7 +86,7 @@ html, body {
 .heading_container h2 {
   position: relative;
   font-weight: bold;
-  text-transform: uppercase;
+  max-width: 300px;
 
 }
 
@@ -106,12 +106,6 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.heading_container.heading_center h2::before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 /*header section*/
@@ -535,9 +529,8 @@ a:focus {
   color: #ff0033;
   font-weight: bold;
   font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 5px;
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 
 /* 3-column layout on desktop, 1 on mobile */
@@ -1036,7 +1029,7 @@ a:focus {
 }
 .team_section {
   background-color: #000;
-  color: #fff;
+  color: #ffffff;
   padding: 60px 0;
   padding-bottom: 1px;
   margin-bottom: 5px;
@@ -1253,7 +1246,7 @@ a:focus {
 
 .result_section .detail-box h2 {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   position: relative;
   padding-top: 10px;
 }
