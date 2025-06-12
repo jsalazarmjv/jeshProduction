@@ -277,10 +277,12 @@ html, body {
 @media (max-width: 600px) {
   .responsive-heading {
     line-height: 1.4;
+    font-size: 35px;
   }
 
   .responsive-heading span {
     display: block;
+    line-height: 1.1;
   }
 
   .desktop-br {
@@ -356,9 +358,9 @@ a:focus {
 }
 
 /* Mobile view: smaller logo */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar-brand img {
-    height: 50px; /* adjust as needed */
+    height: 65px; /* adjust as needed */
   }
 }
 
@@ -883,7 +885,7 @@ a:focus {
 .client_section {
   background-color: #000; /* Black background */
   color: #fff;            /* White default text */
-  padding: 60px 0;        /* Optional: give it breathing room */
+  padding: 50px 0;        /* Optional: give it breathing room */
 }
 
 .client_section .heading_container h2,
@@ -1075,7 +1077,7 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 .team_section .btn-box a {
@@ -1726,9 +1728,9 @@ html, body {
 
 
 .bottom-row p.lead {
-  font-size: 1.25rem;
+  font-size: 1.30rem;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   color: #fff;
   font-weight: 500;
@@ -1784,7 +1786,7 @@ html, body {
   }
 
   .bottom-row p.lead {
-    font-size: 1rem;
+    font-size: 1.10rem;
   }
 }
 
@@ -1924,10 +1926,10 @@ div.p-5 {
 /* Close button (round with triangle icon) */
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   z-index: 1001;
@@ -1962,8 +1964,8 @@ div.p-5 {
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
