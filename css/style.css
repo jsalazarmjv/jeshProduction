@@ -83,10 +83,12 @@ html, body {
           flex-direction: column;
 }
 
+/*Need Help shaping your idea section*/
 .heading_container h2 {
   position: relative;
   font-weight: bold;
   max-width: 550px;
+  margin-top: 25px;
 
 }
 
@@ -1071,6 +1073,7 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .team_section .btn-box a {
@@ -1719,7 +1722,7 @@ html, body {
 }
 
 
-
+/*Whether it's a family section*/
 .bottom-row p.lead {
   font-size: 1.30rem;
   line-height: 1.6;
@@ -1727,7 +1730,7 @@ html, body {
   margin: 0 auto;
   color: #fff;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .btn-3 {
@@ -1740,7 +1743,7 @@ html, body {
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .btn-3:hover,
