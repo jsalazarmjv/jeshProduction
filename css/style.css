@@ -628,6 +628,13 @@ a:focus {
   opacity: 0;
 }
 
+@media (max-width: 600px) {
+  .play-icon {
+    font-size: 64px; /* bigger for phone */
+    transform: translate(-50%, -50%) scaleX(0.8) scaleY(1.2); /* narrow and tall */
+  }
+}
+
 
 
 .btn-4 {
