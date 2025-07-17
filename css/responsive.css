@@ -18,60 +18,13 @@
     margin: 5px 0;
   }
 
-  .custom_nav-container.navbar-expand-lg .form-inline {
-    justify-content: center;
-  }
-
   .custom_nav-container.navbar-expand-lg {
     padding-top: 10px;
     align-items: center;
   }
-
-  .slider_section {
-    padding: 45px 0 150px 0;
-  }
-
-  .sub_page .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
-    padding-bottom: 15px;
-  }
 }
 
 @media (max-width: 768px) {
-  .slider_section ol.carousel-indicators {
-    justify-content: center;
-  }
-
-  .slider_section {
-    text-align: center;
-  }
-
-  .slider_section .img-box {
-    margin-top: 35px;
-  }
-
-  .slider_section .detail-box .btn-box {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .about_section .heading_container {
-    margin-bottom: 0;
-  }
-
-  .about_section .row {
-    flex-direction: column-reverse;
-  }
-
-  .about_section .detail-box {
-    margin-left: 0;
-    width: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-  }
-
-  .alt_services_container .alt_services_container .alt_box {
-        flex-basis: 100%;
-        margin: 2% 0;
-    }
 
   .client_section .carousel_btn-box {
     margin-top: 25px;
@@ -96,24 +49,11 @@
   .info_section .info_logo {
     align-items: center;
   }
-
-  .info_section .info_form .social_box {
-    justify-content: center;
-  }
-
-  .info_section .info_form .social_box a {
-    margin: 0 5px;
-  }
 }
 
 @media (max-width: 576px) {
   .header_top a span {
     display: none;
-  }
-
-  .slider_section .detail-box h1 {
-    font-size: 2.5rem;
-    line-height: 55px;
   }
 }
 
