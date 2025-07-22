@@ -1266,18 +1266,6 @@ a:focus {
   padding-top: 10px;
 }
 
-
-.result_section .detail-box h2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 7px;
-  border-radius: 10px;
-  background-color: #ffffff;
-}
-
 .result_section .detail-box p {
   margin-top: 15px;
 }
