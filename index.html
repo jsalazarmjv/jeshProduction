@@ -229,9 +229,9 @@
 
       <!-- VIDEO SECOND ON PHONE -->
       <div class="col-md-6 px-0 order-2 order-md-1">
-        <div class="img-box" id="serviceVideoContainer">
-          <!-- Video will be moved here by JS when in service section -->
-        </div>
+      <div class="img-box" id="serviceVideoContainer">
+      <video src="images/HeroWebVideo6.1MB.mp4" autoplay muted loop playsinline preload="metadata" poster="images/HeroWebVideoPoster.jpg" style="width:100%;height:auto;display:block;"></video>
+      </div>
       </div>
     </div>
   </div>
@@ -796,33 +796,6 @@ emailjs.send("service_ak52dpr", "template_kxay1mj", formData)
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const video = document.getElementById('mainVideo');
-  const heroContainer = document.getElementById('heroVideoContainer');
-  const serviceContainer = document.getElementById('serviceVideoContainer');
-  const serviceSection = document.getElementById('services');
-
-  // Place video in hero section by default
-  heroContainer.appendChild(video);
-
-  window.addEventListener('scroll', function() {
-    const serviceRect = serviceSection.getBoundingClientRect();
-    const heroRect = heroContainer.getBoundingClientRect();
-
-    // If service section is in view, move video there
-    if (serviceRect.top < window.innerHeight/2 && serviceRect.bottom > 0) {
-      if (serviceContainer.contains(video) === false) {
-        serviceContainer.appendChild(video);
-      }
-    } else {
-      if (heroContainer.contains(video) === false) {
-        heroContainer.appendChild(video);
-      }
-    }
-  });
-});
-</script>
 
 
 </body>
