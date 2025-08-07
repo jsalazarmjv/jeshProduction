@@ -207,70 +207,64 @@
   <!-- end about section -->
 
   <!-- service section -->
-  <!-- una imagen a la izquierda, texto a la derecha (video) -->
-<section id="services" class="result_section">
-  <div class="container-fluid">
-    <div class="row video-row">
-      <!-- TEXT FIRST ON PHONE -->
-      <div class="col-md-6 order-1 order-md-2">
-        <div class="detail-box">
-          <br>
-          <h2>
-            <span style="color: #ff0033;  font-size: 3rem;">Video</span>
-            <br>
-            Eye-Catching films that tell your story.
-          </h2>
-          <p>
-            Promotional Videos, Events, Weddings, Real State, Construction Updates and More...
-          </p>
-        </div>
-        <br>
-      </div>
 
-      <!-- VIDEO SECOND ON PHONE -->
-      <div class="col-md-6 px-0 order-2 order-md-1">
-      <div class="img-box" id="serviceVideoContainer">
-      <video src="images/HeroWebVideo6.1MB.mp4" autoplay muted loop playsinline preload="metadata" style="width:100%;height:auto;display:block;"></video>
-      </div>
-      </div>
+<!-- Video Section -->
+<section id="services" class="services-section">
+    <div class="container-fluid fluid-container p-0">
+        <div class="row video-section-row g-0">
+            <!-- TEXT FIRST ON MOBILE, SECOND ON DESKTOP -->
+            <div class="col-md-6 order-1 order-md-2 d-flex">
+                <div class="content-wrapper">
+                    <h2>
+                        <span class="service-title-red">Video</span>
+                        <br>
+                        Eye-Catching films that tell your story.
+                    </h2>
+                    <p>
+                        Promotional Videos, Events, Weddings, Real State, Construction Updates and More...
+                    </p>
+                </div>
+            </div>
+            <!-- VIDEO SECOND ON MOBILE, FIRST ON DESKTOP -->
+            <div class="col-md-6 order-2 order-md-1 d-flex">
+                <div class="media-container">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="images/HeroWebVideo6.1MB.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-
-  <!-- -->
-
-  <!-- Texto a la izquierda, imagen a la derecha (Fotografía) -->
-  <section class="result_section">
-    <div class="container-fluid">
-      <div class="row">
-
-        <div class="col-lg-6 col-md-5">
-          <div class="detail-box">
-            <br>
-            <h2>
-              <span style="color: #ff0033;  font-size: 3rem;">Photography</span>
-              <br>
-              Beautiful images that enhance your ideas.
-            </h2>
-            <p>
-              Photo sessions of all kinds, large and small Events, Graduations, Real State, and More...
-            </p>
-
-          </div>
-          <br>
+<!-- Photography Section -->
+<section class="services-section">
+    <div class="container-fluid fluid-container p-0">
+        <div class="row photo-section-row g-0">
+            <!-- TEXT LEFT -->
+            <div class="col-md-6 d-flex">
+                <div class="content-wrapper">
+                    <h2>
+                        <span class="service-title-red">Photography</span>
+                        <br>
+                        Beautiful images that enhance your ideas.
+                    </h2>
+                    <p>
+                        Photo sessions of all kinds, large and small Events, Graduations, Real State, and More...
+                    </p>
+                </div>
+            </div>
+            
+            <!-- IMAGE RIGHT -->
+            <div class="col-md-6 d-flex">
+                <div class="media-container">
+                    <img src="images/GalleryConcert/Concerts-7.avif" alt="Concert photography example" loading="lazy">
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 px-0">
-          <div class="img-box">
-            <img src="images/GalleryConcert/Concerts-7.avif" alt="photo">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-
-
-
+</section>
 
   <!-- -->
   <!-- end service section -->

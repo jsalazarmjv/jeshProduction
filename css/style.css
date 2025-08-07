@@ -1961,3 +1961,192 @@ div.p-5 {
   line-height: 1;
   display: block;
 }
+
+
+.services-section {
+    padding: 0;
+}
+.media-container {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.media-container img,
+.media-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 40px;
+}
+.content-wrapper h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.content-wrapper p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+/* FIX: Remove Bootstrap column padding */
+.video-section-row .col-md-6,
+.photo-section-row .col-md-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+/* FIX: Ensure rows have no margins */
+.video-section-row,
+.photo-section-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+/* Ensure equal heights on larger screens - each section matches its media */
+@media (min-width: 768px) {
+    .video-section-row,
+    .photo-section-row {
+        height: auto; /* Let each section determine its own natural height */
+        min-height: auto; /* Remove minimum height constraint */
+    }
+    
+    .video-section-row > div,
+    .photo-section-row > div {
+        display: flex;
+        align-items: stretch;
+    }
+    
+    .content-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .media-container {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .media-container video {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        object-fit: contain;
+        display: block;
+    }
+    
+    .media-container img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        object-fit: contain;
+        display: block;
+    }
+}
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .fluid-container {
+        padding: 0 !important;
+    }
+    
+    .content-wrapper {
+        padding: 30px 20px;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    .media-container {
+        width: 100%;
+    }
+    
+    /* Mobile-specific media styling to maintain aspect ratio */
+    .media-container img,
+    .media-container video {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Changed from cover to contain to preserve aspect ratio */
+        object-position: center;
+    }
+    
+    /* Ensure media container height matches content on mobile */
+    .media-container {
+        min-height: auto;
+        height: auto;
+        display: block; /* Changed from flex to block for better height matching */
+    }
+    
+    .content-wrapper h2 span {
+        font-size: 2.5rem !important;
+    }
+    
+    /* Ensure mobile columns are full width */
+    .video-section-row > div,
+    .photo-section-row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .content-wrapper {
+        padding: 40px 30px;
+    }
+    
+    .content-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content-wrapper h2 span {
+        font-size: 2.5rem !important;
+    }
+    
+    .content-wrapper p {
+        font-size: 1rem;
+    }
+    
+    /* Edge-to-edge for tablets */
+    .media-container {
+        padding: 0;
+        margin: 0;
+    }
+}
+/* Desktop adjustments */
+@media (min-width: 1200px) {
+    .content-wrapper {
+        padding: 60px 50px;
+    }
+    
+    .content-wrapper h2 {
+        font-size: 2.2rem;
+    }
+    
+    .content-wrapper h2 span {
+        font-size: 3rem !important;
+    }
+    
+    .content-wrapper p {
+        font-size: 1.2rem;
+    }
+}
+.service-title-red {
+    color: #ff0033;
+    font-size: 3rem;
+}
