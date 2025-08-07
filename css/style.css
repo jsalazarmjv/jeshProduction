@@ -1963,6 +1963,7 @@ div.p-5 {
 }
 
 
+
 .services-section {
     padding: 0;
 }
@@ -2084,9 +2085,23 @@ div.p-5 {
         object-position: center;
     }
     
+    /* Make both video and photo sections match video height */
+    .video-section-row .media-container,
+    .photo-section-row .media-container {
+        height: auto;
+        display: block;
+    }
+    
+    /* Force photo container to match video dimensions */
+    .photo-section-row .media-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Use cover for photos to fill the video's aspect ratio */
+        object-position: center;
+    }
+    
     /* Ensure media container height matches content on mobile */
     .media-container {
-        min-height: auto;
         height: auto;
         display: block; /* Changed from flex to block for better height matching */
     }
