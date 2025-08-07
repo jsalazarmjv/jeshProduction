@@ -17,8 +17,8 @@ const albums = {
   "GalleryCorp": {count: 17, prefix: "Corp"},
   "GalleryFamily": {count: 18, prefix: "Family"},
   "GalleryGrad": {count: 18, prefix: "Grads"},
-  "GalleryIndoor": {count: 31, prefix: "Indoor"},
-  "GalleryOutdoor": {count: 37, prefix: "Outdoor"},
+  "GalleryIndoor": {count: 21, prefix: "Indoor"},
+  "GalleryOutdoor": {count: 26, prefix: "Outdoor"},
   "GalleryRealState": {count: 10, prefix: "RealState"},
   "GalleryWed": {count: 19, prefix: "Wedding"}
 };
