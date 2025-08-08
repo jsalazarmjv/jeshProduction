@@ -12,14 +12,14 @@ let maxImages = 1;
 
 // Album data with folder keys, image count, and prefix for images
 const albums = {
-  "GalleryBDays": {count: 30, prefix: "Bday"},
+  "GalleryBDays": {count: 23, prefix: "Bday"},
   "GalleryConcert": {count: 25, prefix: "Concerts"},
   "GalleryCorp": {count: 17, prefix: "Corp"},
   "GalleryFamily": {count: 18, prefix: "Family"},
   "GalleryGrad": {count: 18, prefix: "Grads"},
   "GalleryIndoor": {count: 21, prefix: "Indoor"},
   "GalleryOutdoor": {count: 26, prefix: "Outdoor"},
-  "GalleryRealState": {count: 10, prefix: "RealState"},
+  "GalleryRealState": {count: 8, prefix: "RealState"},
   "GalleryWed": {count: 19, prefix: "Wedding"}
 };
 
