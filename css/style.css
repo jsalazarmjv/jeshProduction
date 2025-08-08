@@ -351,13 +351,13 @@ a:focus {
 
 /* Default (desktop/tablet) logo size */
 .navbar-brand img {
-  height: 80px;
+  height: 150px; margin-top: 20px; margin-left: 15px;
 }
 
-/* Mobile view: smaller logo */
-@media (max-width: 900px) {
+/* Mobile view: smaller logo hero section */
+@media (max-width: 850px) {
   .navbar-brand img {
-    height: 45px; /* adjust as needed */
+    height: 66px; margin-left: 1px; margin-top: 1px;
   }
 }
 
