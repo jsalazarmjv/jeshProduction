@@ -1078,7 +1078,7 @@ small,
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #4b5749;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -1098,7 +1098,7 @@ small,
 }
 
 .form-control:focus {
-  color: #495057;
+  color: #4c5749;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
@@ -1152,7 +1152,7 @@ textarea.form-control {
 }
 
 .form-check-input:disabled ~ .form-check-label {
-  color: #6c757d;
+  color: #6c7d6f;
 }
 
 .form-check-label {
