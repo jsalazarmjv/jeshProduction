@@ -524,7 +524,7 @@ a:focus {
   font-weight: bold;
   font-weight: bold;
   margin-bottom: 5px;
-  font-size: 2.1rem;
+  font-size: 2.3rem;
 }
 
 /* 3-column layout on desktop, 1 on mobile */
@@ -569,7 +569,7 @@ a:focus {
 }
 
 .gallery-text h6 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 10px;
   font-weight: bold;
 }
@@ -587,7 +587,7 @@ a:focus {
 
 .gallery-text p {
   font-size: 14px;
-  color: #666;
+  color: #000000;
   margin: 0;
 }
 
@@ -1997,7 +1997,7 @@ div.p-5 {
 }
 .content-wrapper p {
     font-size: 1.1rem;
-    color: #666;
+    color: #000000;
     margin-bottom: 0;
 }
 /* FIX: Remove Bootstrap column padding */
