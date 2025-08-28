@@ -55,6 +55,37 @@
 
               <title>Jesh Production - Professional Photography & Video Services | Las Vegas</title>
 
+<!-- About us SLIDER -->
+<style>
+  .slider {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slides {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide2 {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .slide2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+</style>
+
+
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -206,20 +237,17 @@
           </h2>
         </div>
         </div>
-            <div class="container-fluid">
-      <div class="row video-row"> <!-- ADD THIS CLASS -->
-        <div class="col-md-6 px-0">
-          <div class="img-box">
-             <img src="images/About-2.avif" alt="about image">
-          </div>
-        </div>
-        <div class="col-md-6 px-0">
-          <div class="img-box">
-               <img src="images/About-1.avif" alt="about image">
-          </div>
-        </div>
-      </div>
+    <!-- About Us SLIDER -->
+<div class="slider">
+  <div class="slides">
+    <div class="slide2">
+      <img src="images/About-1.avif" alt="Slide 1">
     </div>
+    <div class="slide2">
+      <img src="images/About-2.avif" alt="Slide 2">
+    </div>
+  </div>
+</div>
       <!-- Bottom row: black bg, white text -->
       <div class="row no-gutters bottom-row flex-fill d-flex align-items-center justify-content-center text-center">
         <div class="col-12 col-md-10 px-4">
@@ -812,7 +840,18 @@ emailjs.send("service_ak52dpr", "template_kxay1mj", formData)
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
 
+<!-- About us SLIDER -->
+<script>
+  const slides = document.querySelector('.slides');
+  let currentSlide = 0;
 
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % 2;
+    slides.style.transform = `translateX(-${currentSlide * 50}%)`;
+  }
+
+  setInterval(nextSlide, 4000);
+</script>
 
 </body>
 
