@@ -15,6 +15,10 @@ html, body {
   padding: 0;
 }
 
+addPad{
+  padding-top: 45px;
+}
+
 .video-background {
   position: relative;
   width: 100%;
@@ -95,16 +99,7 @@ html, body {
 
 }
 
-.heading_container h2::before {
-  content: "";
-  width: 40px;
-  height: 7px;
-  background-color: #000000;
-  border-radius: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+
 
 .heading_container.heading_center {
   -webkit-box-align: center;
@@ -1021,8 +1016,8 @@ a:focus {
 .team_section {
   background-color: #000;
   color: #ffffff;
-  padding: 60px 0;
-  padding-bottom: 1px;
+  padding: 35px 0;
+  padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
@@ -1061,7 +1056,7 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 30px;
+  margin-top: 7px;
   margin-bottom: 25px;
 }
 
@@ -1081,7 +1076,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #101010;
+  background-color: #000000;
   color: #ffffff;
   padding: 75px 0 10px 0;
 }
@@ -1191,7 +1186,7 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-  background-color: #101010;
+  background-color: #000000;
 }
 
 .footer_section p {
@@ -1343,7 +1338,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
+  
 }
 
 .result_equal_height .top-row > div {
@@ -1745,6 +1740,7 @@ html, body {
 
   .smaller{
     font-size: 1.5rem;
+    margin-bottom: 0%;
   }
 
   .top-row,

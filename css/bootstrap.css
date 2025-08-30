@@ -1813,14 +1813,11 @@ a.text-danger:hover, a.text-danger:focus {
   margin-bottom: 0.5rem !important;
 }
 
-.mt-4,
-.my-4 {
-  margin-top: 1.5rem !important;
-}
+
 
 .mb-4,
 .my-4 {
-  margin-bottom: 1.5rem !important;
+
 }
 
 .p-0 {
