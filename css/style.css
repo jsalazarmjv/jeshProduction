@@ -1186,17 +1186,17 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
-  background-color: #000000;
+  background-color: #ff0033;
 }
 
 .footer_section p {
-  color: rgba(254, 254, 255, 0.7);
+  color: #000000;
   margin: 0;
   text-align: center;
 }
 
 .footer_section a {
-  color: rgba(254, 254, 255, 0.7);
+  color: #000000;
 }
 
 /* end footer section*/
