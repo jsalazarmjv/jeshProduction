@@ -1831,8 +1831,6 @@ div.p-5 {
 
 
 
-
-
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -1854,7 +1852,6 @@ div.p-5 {
 .scroll-to-top:hover {
   background-color: #555;
 }
-
 
 
 
