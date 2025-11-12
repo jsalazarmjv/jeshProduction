@@ -1056,7 +1056,7 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 7px;
+  margin-top: 0px;
   margin-bottom: 25px;
 }
 
@@ -1670,6 +1670,13 @@ html, body {
 
 .bottom-row {
   background-color: #000; /* black bg */
+  color: #fff;            /* white text */
+  flex-direction: column;
+  
+}
+
+.bottom-row2 {
+  background-color: #29a52200; /* black bg */
   color: #fff;            /* white text */
   flex-direction: column;
   
