@@ -248,6 +248,336 @@
           </h2>
         </div>
         </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinematic Video Section</title>
+  <style>
+    /* ============================================================
+       CINEMATIC VIDEO SECTION — Pure HTML + CSS
+       Drop this entire file (or just the <section> + <style>)
+       into any webpage. No external libraries required.
+       ============================================================ */
+
+    /* Uses the same fonts as the rest of the website (already loaded in <head>) */
+    /* Open Sans, Poppins, Roboto — no extra import needed */
+
+    /* ── Reset (scoped — does not touch body or global styles) ── */
+    .cinema-section *, .cinema-section *::before, .cinema-section *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================================
+       SECTION WRAPPER
+       Deep black background with a subtle radial cinematic glow
+       (Netflix / Apple TV style vignette from centre)
+       ============================================================ */
+    .cinema-section {
+      position: relative;
+      width: 100%;
+      padding: 96px 48px 112px;
+      overflow: hidden;
+
+      /* Deep black base */
+      background: #000;
+
+      /* Cinematic centre-glow — like a projector beam */
+      background-image:
+        radial-gradient(ellipse 120% 60% at 50% 50%,
+          rgba(30, 30, 40, 0.55) 0%,
+          rgba(0, 0, 0, 0) 70%),
+        /* Subtle warm horizon line at top */
+        linear-gradient(180deg,
+          rgba(255, 200, 100, 0.03) 0%,
+          transparent 18%,
+          transparent 82%,
+          rgba(80, 80, 255, 0.04) 100%);
+    }
+
+    /* Faint film-grain noise overlay (CSS-only, no image needed) */
+    .cinema-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* ── Scoped base styles (color + font only inside this section) ── */
+    .cinema-section { color: #fff; font-family: 'Open Sans', sans-serif; }
+
+    /* ── All content sits above the overlays ── */
+    .cinema-inner { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; }
+
+    /* ============================================================
+       SECTION TITLE  (optional — remove the .cinema-header block
+       if you don't want a heading)
+       ============================================================ */
+    .cinema-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .cinema-eyebrow {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 16px;
+    }
+
+    .cinema-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(36px, 5vw, 68px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: #fff;
+      /* Subtle text glow */
+      text-shadow: 0 0 80px rgba(255, 255, 255, 0.12);
+    }
+
+    .cinema-title em {
+      font-style: italic;
+      color: rgba(255, 220, 140, 0.85); /* Warm golden accent */
+    }
+
+    .cinema-rule {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      margin: 28px auto 0;
+    }
+
+    /* ============================================================
+       VIDEO GRID
+       3 columns on desktop → 1 column on mobile.
+       Change the three embed URLs below to swap videos.
+       ============================================================ */
+    .cinema-grid {
+      display: grid;
+      /* 3 equal columns on wide screens */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    /* ── Responsive: 2 columns on tablet ── */
+    @media (max-width: 900px) {
+      .cinema-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    }
+
+    /* ── Responsive: 1 column on mobile ── */
+    @media (max-width: 560px) {
+      .cinema-section { padding: 64px 20px 80px; }
+      .cinema-grid { grid-template-columns: 1fr; gap: 24px; }
+      .cinema-title { font-size: 36px; }
+    }
+
+    /* ============================================================
+       VIDEO CARD
+       ============================================================ */
+    .cinema-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+
+      /* Premium cinematic shadow — multi-layer, coloured */
+      box-shadow:
+        0 0  0 1px rgba(255, 255, 255, 0.06),   /* hairline border */
+        0 8px 24px rgba(0, 0, 0, 0.8),           /* main depth shadow */
+        0 0  60px rgba(0, 0, 0, 0.6),            /* wide diffuse shadow */
+        0 0  0 0   rgba(255, 180, 60, 0);        /* glow — animates on hover */
+
+      /* Smooth hover transition */
+      transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+      /* GPU-accelerate transforms */
+      will-change: transform;
+      transform: translateZ(0);
+    }
+
+    /* ── Hover: subtle lift + warm glow ── */
+    .cinema-card:hover {
+      transform: scale(1.028) translateY(-4px);
+      box-shadow:
+        0 0  0 1px rgba(255, 255, 255, 0.12),
+        0 20px 48px rgba(0, 0, 0, 0.9),
+        0  0  80px rgba(0, 0, 0, 0.6),
+        0  0  40px rgba(255, 200, 80, 0.08);   /* warm glow on hover */
+    }
+
+    /* ── Decorative top-edge shimmer line ── */
+    .cinema-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 40%,
+        rgba(255, 255, 255, 0.15) 60%,
+        transparent 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* ============================================================
+       16 : 9 ASPECT-RATIO WRAPPER
+       Maintains perfect widescreen ratio at any container width.
+       ============================================================ */
+    .cinema-ratio {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 9 / 16 = 0.5625 = 56.25% */
+    }
+
+    /* ── YouTube iframe fills the ratio box ── */
+    .cinema-ratio iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ============================================================
+       OPTIONAL CAPTION below each video
+       Remove the .cinema-caption elements if not needed.
+       ============================================================ */
+    .cinema-caption {
+      padding: 14px 18px 16px;
+      background: linear-gradient(180deg, rgba(10,10,12,0.95) 0%, #060608 100%);
+    }
+
+    .cinema-caption-title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ================================================================
+     CINEMATIC VIDEO SECTION
+     ✦ Copy from <section class="cinema-section"> to </section>
+       and paste into any webpage body.
+     ✦ Also copy the <style> block above into your <head>.
+     ================================================================ -->
+
+<section class="cinema-section" aria-label="Featured videos">
+  <div class="cinema-inner">
+
+    <!-- ── Optional heading block ─────────────────────────────── -->
+    <header class="cinema-header">
+      <span class="cinema-eyebrow">Featured</span>
+      <h2 class="cinema-title">Clark County <em style="color: #ff0033;">Projects</em> </h2>
+      <span class="cinema-rule" aria-hidden="true"></span>
+    </header>
+    <!-- ── End heading block ──────────────────────────────────── -->
+
+    <!-- ── Video grid ─────────────────────────────────────────── -->
+    <div class="cinema-grid">
+
+      <!-- ╔══════════════════════════════════════════════════════╗
+           ║  VIDEO CARD 1                                        ║
+           ║  HOW TO CHANGE THE VIDEO:                           ║
+           ║  1. Go to the YouTube video you want.               ║
+           ║  2. Click Share → Embed.                            ║
+           ║  3. Copy the src URL from the iframe code.          ║
+           ║     It looks like:                                  ║
+           ║     https://www.youtube.com/embed/VIDEO_ID          ║
+           ║  4. Replace the src value below with your URL.      ║
+           ║  5. Update the title attribute for accessibility.   ║
+           ║  6. Optionally update the caption text.             ║
+           ╚══════════════════════════════════════════════════════╝ -->
+      <div class="cinema-card">
+        <div class="cinema-ratio">
+          <!-- ▼ REPLACE src WITH YOUR YOUTUBE EMBED URL ▼ -->
+          <iframe
+            src="https://www.youtube.com/embed/dTa8FUTljsI"
+            title="Video One"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+          <!-- ▲ REPLACE src WITH YOUR YOUTUBE EMBED URL ▲ -->
+        </div>
+        <!-- Optional caption — remove <div class="cinema-caption"> if unwanted -->
+        <div class="cinema-caption">
+          <p class="cinema-caption-title">Lifeguard Promo</p>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════════════════════════════════╗
+           ║  VIDEO CARD 2 — follow same steps as Card 1 above   ║
+           ╚══════════════════════════════════════════════════════╝ -->
+      <div class="cinema-card">
+        <div class="cinema-ratio">
+          <!-- ▼ REPLACE src WITH YOUR YOUTUBE EMBED URL ▼ -->
+          <iframe
+            src="https://www.youtube.com/embed/dbpPXN2o9Mw"
+            title="Video Two"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+          <!-- ▲ REPLACE src WITH YOUR YOUTUBE EMBED URL ▲ -->
+        </div>
+        <div class="cinema-caption">
+          <p class="cinema-caption-title">Archery Promo</p>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════════════════════════════════╗
+           ║  VIDEO CARD 3 — follow same steps as Card 1 above   ║
+           ╚══════════════════════════════════════════════════════╝ -->
+      <div class="cinema-card">
+        <div class="cinema-ratio">
+          <!-- ▼ REPLACE src WITH YOUR YOUTUBE EMBED URL ▼ -->
+          <iframe
+            src="https://www.youtube.com/embed/fY6tKYhCEKU"
+            title="Video Three"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+          <!-- ▲ REPLACE src WITH YOUR YOUTUBE EMBED URL ▲ -->
+        </div>
+        <div class="cinema-caption">
+          <p class="cinema-caption-title">Bird Watching Promo</p>
+        </div>
+      </div>
+
+    </div><!-- /cinema-grid -->
+
+  </div><!-- /cinema-inner -->
+</section>
+
+</body>
+</html>
+
     <!-- About Us SLIDER -->
 <div class="slider">
   <div class="slides">
