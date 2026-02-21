@@ -249,6 +249,100 @@
         </div>
         </div>
 
+    <!-- About Us SLIDER -->
+<div class="slider">
+  <div class="slides">
+    <div class="slide2">
+      <img src="images/About-1.avif" alt="Slide 1">
+    </div>
+    <div class="slide2">
+      <img src="images/About-2.avif" alt="Slide 2">
+    </div>
+  </div>
+</div>
+      <!-- Bottom row: black bg, white text -->
+      <div class="row no-gutters bottom-row flex-fill d-flex align-items-center justify-content-center text-center">
+        <div class="col-12 col-md-10 px-4">
+          <p class="lead"><br>
+            From family sessions to marketing videos. <br> We produce <span style="color: #ff0033;"><strong>professional</strong></span> quality services.
+            
+
+          </p>
+
+          <div class="btn-box ">
+            <a href="#contact" class="btn-3">Let's go!</a><br><br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- service section -->
+
+<!-- Video Section -->
+<section id="services" class="services-section">
+    <div class="container-fluid fluid-container p-0">
+        <div class="row video-section-row g-0">
+            <!-- TEXT FIRST ON MOBILE, SECOND ON DESKTOP -->
+            <div class="col-md-6 order-1 order-md-2 d-flex">
+                <div class="content-wrapper">
+                    <h2>
+                        <span class="service-title-red">Video</span>
+                        <br>
+                        Eye-Catching films that enhance your ideas!
+                    </h2>
+                    
+                    <p>
+                        Marketing Promos, Weddings, Special Events, Real Estate & Social Media Content... we'll make it happen!
+                    </p>
+                </div>
+            </div>
+            <!-- VIDEO SECOND ON MOBILE, FIRST ON DESKTOP -->
+            <div class="col-md-6 order-2 order-md-1 d-flex">
+                <div class="media-container">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="images/HeroWebVideo6.1MB.mp4" type="video/mp4" alt="Video example">
+                        Your browser does not support the video tag.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Photography Section -->
+<section class="services-section">
+    <div class="container-fluid fluid-container p-0">
+        <div class="row photo-section-row g-0">
+            <!-- TEXT LEFT -->
+            <div class="col-md-6 d-flex">
+                <div class="content-wrapper">
+                    <h2>
+                        <span class="service-title-red">Photography</span>
+                        <br>
+                        Making your memories last for generations!
+                    </h2>
+                    <p>
+                        Family, couples & portrait Sessions, Graduations & Weddings, Real Estate & Marketing... you name it!
+                    </p>
+                </div>
+            </div>
+            
+            <!-- IMAGE RIGHT -->
+            <div class="col-md-6 d-flex">
+                <div class="media-container">
+                    <img src="images/GalleryFamily/Family-1.avif" alt="Family Session">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end service section -->
+
+  <!-- YouTube Section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -282,33 +376,10 @@
       width: 100%;
       padding: 96px 48px 112px;
       overflow: hidden;
-
-      /* Deep black base */
-      background: #000;
-
-      /* Cinematic centre-glow — like a projector beam */
-      background-image:
-        radial-gradient(ellipse 120% 60% at 50% 50%,
-          rgba(30, 30, 40, 0.55) 0%,
-          rgba(0, 0, 0, 0) 70%),
-        /* Subtle warm horizon line at top */
-        linear-gradient(180deg,
-          rgba(255, 200, 100, 0.03) 0%,
-          transparent 18%,
-          transparent 82%,
-          rgba(80, 80, 255, 0.04) 100%);
+      /* Simple single gradient — much lighter than the original double radial */
+      background: linear-gradient(180deg, #0a0a0a 0%, #000 40%);
     }
 
-    /* Faint film-grain noise overlay (CSS-only, no image needed) */
-    .cinema-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.6;
-    }
 
     /* ── Scoped base styles (color + font only inside this section) ── */
     .cinema-section { color: #fff; font-family: 'Open Sans', sans-serif; }
@@ -332,7 +403,7 @@
       font-weight: 600;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 1);
       margin-bottom: 16px;
     }
 
@@ -343,13 +414,11 @@
       line-height: 1.1;
       letter-spacing: -0.01em;
       color: #fff;
-      /* Subtle text glow */
-      text-shadow: 0 0 80px rgba(255, 255, 255, 0.12);
     }
 
     .cinema-title em {
-      font-style: italic;
-      color: rgba(255, 220, 140, 0.85); /* Warm golden accent */
+      font-style: normal;
+      color: #ff0033;
     }
 
     .cinema-rule {
@@ -362,17 +431,17 @@
 
     /* ============================================================
        VIDEO GRID
-       3 columns on desktop → 1 column on mobile.
+       2 columns on desktop → 1 column on mobile.
        Change the three embed URLs below to swap videos.
        ============================================================ */
     .cinema-grid {
       display: grid;
-      /* 3 equal columns on wide screens */
-      grid-template-columns: repeat(3, 1fr);
+      /* 2 equal columns on wide screens */
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
 
-    /* ── Responsive: 2 columns on tablet ── */
+    /* ── Responsive: 1 column on mobile ── */
     @media (max-width: 900px) {
       .cinema-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     }
@@ -391,47 +460,14 @@
       position: relative;
       border-radius: 14px;
       overflow: hidden;
-
-      /* Premium cinematic shadow — multi-layer, coloured */
-      box-shadow:
-        0 0  0 1px rgba(255, 255, 255, 0.06),   /* hairline border */
-        0 8px 24px rgba(0, 0, 0, 0.8),           /* main depth shadow */
-        0 0  60px rgba(0, 0, 0, 0.6),            /* wide diffuse shadow */
-        0 0  0 0   rgba(255, 180, 60, 0);        /* glow — animates on hover */
-
-      /* Smooth hover transition */
-      transition:
-        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-
-      /* GPU-accelerate transforms */
-      will-change: transform;
-      transform: translateZ(0);
+      /* Single-layer shadow — much lighter than 4-layer original */
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    /* ── Hover: subtle lift + warm glow ── */
     .cinema-card:hover {
-      transform: scale(1.028) translateY(-4px);
-      box-shadow:
-        0 0  0 1px rgba(255, 255, 255, 0.12),
-        0 20px 48px rgba(0, 0, 0, 0.9),
-        0  0  80px rgba(0, 0, 0, 0.6),
-        0  0  40px rgba(255, 200, 80, 0.08);   /* warm glow on hover */
-    }
-
-    /* ── Decorative top-edge shimmer line ── */
-    .cinema-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.15) 40%,
-        rgba(255, 255, 255, 0.15) 60%,
-        transparent 100%);
-      pointer-events: none;
-      z-index: 2;
+      transform: scale(1.025) translateY(-3px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
     }
 
     /* ============================================================
@@ -491,8 +527,8 @@
 
     <!-- ── Optional heading block ─────────────────────────────── -->
     <header class="cinema-header">
-      <span class="cinema-eyebrow">Featured</span>
-      <h2 class="cinema-title">Clark County <em style="color: #ff0033;">Projects</em> </h2>
+      <span class="cinema-eyebrow">SOME OF OUR FEATURED</span>
+      <h2 class="cinema-title">Clark County <em><i>Projects</i></em></h2>
       <span class="cinema-rule" aria-hidden="true"></span>
     </header>
     <!-- ── End heading block ──────────────────────────────────── -->
@@ -530,28 +566,10 @@
         </div>
       </div>
 
-      <!-- ╔══════════════════════════════════════════════════════╗
-           ║  VIDEO CARD 2 — follow same steps as Card 1 above   ║
-           ╚══════════════════════════════════════════════════════╝ -->
-      <div class="cinema-card">
-        <div class="cinema-ratio">
-          <!-- ▼ REPLACE src WITH YOUR YOUTUBE EMBED URL ▼ -->
-          <iframe
-            src="https://www.youtube.com/embed/dbpPXN2o9Mw"
-            title="Video Two"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
-          <!-- ▲ REPLACE src WITH YOUR YOUTUBE EMBED URL ▲ -->
-        </div>
-        <div class="cinema-caption">
-          <p class="cinema-caption-title">Archery Promo</p>
-        </div>
-      </div>
+
 
       <!-- ╔══════════════════════════════════════════════════════╗
-           ║  VIDEO CARD 3 — follow same steps as Card 1 above   ║
+           ║  VIDEO CARD 2 — follow same steps as Card 1 above   ║
            ╚══════════════════════════════════════════════════════╝ -->
       <div class="cinema-card">
         <div class="cinema-ratio">
@@ -577,145 +595,7 @@
 
 </body>
 </html>
-
-    <!-- About Us SLIDER -->
-<div class="slider">
-  <div class="slides">
-    <div class="slide2">
-      <img src="images/About-1.avif" alt="Slide 1">
-    </div>
-    <div class="slide2">
-      <img src="images/About-2.avif" alt="Slide 2">
-    </div>
-  </div>
-</div>
-      <!-- Bottom row: black bg, white text -->
-      <div class="row no-gutters bottom-row flex-fill d-flex align-items-center justify-content-center text-center">
-        <div class="col-12 col-md-10 px-4">
-          <p class="lead"><br>
-            From family sessions to marketing videos. <br> We produce <span style="color: #ff0033;"><strong>professional</strong></span> quality services.
-            
-
-          </p>
-
-          <div class="btn-box ">
-            <a href="#contact" class="btn-3">Let's go!</a><br><br>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-  <!-- end about section -->
-
-  <!-- service section -->
-
-<!-- Video Section -->
-<section id="services" class="services-section">
-    <div class="container-fluid fluid-container p-0">
-        <div class="row video-section-row g-0">
-            <!-- TEXT FIRST ON MOBILE, SECOND ON DESKTOP -->
-            <div class="col-md-6 order-1 order-md-2 d-flex">
-                <div class="content-wrapper">
-                    <h2>
-                        <span class="service-title-red">Video</span>
-                        <br>
-                        Eye-Catching films that enhance your ideas!
-                    </h2>
-                    
-                    <p>
-                        Marketing Promos, Weddings, Special Events, Real Estate & Social Media Content... we'll make it happen!
-                    </p>
-                </div>
-            </div>
-            <!-- VIDEO SECOND ON MOBILE, FIRST ON DESKTOP -->
-            <div class="col-md-6 order-2 order-md-1 d-flex">
-                <div class="media-container">
-                    <video autoplay muted loop playsinline preload="metadata">
-                        <source src="images/HeroWebVideo6.1MB.mp4" type="video/mp4" alt="Video example">
-                        Your browser does not support the video tag.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Photography Section -->
-<section class="services-section">
-    <div class="container-fluid fluid-container p-0">
-        <div class="row photo-section-row g-0">
-            <!-- TEXT LEFT -->
-            <div class="col-md-6 d-flex">
-                <div class="content-wrapper">
-                    <h2>
-                        <span class="service-title-red">Photography</span>
-                        <br>
-                        Making your memories last for generations!
-                    </h2>
-                    <p>
-                        Family, couples & portrait Sessions, Graduations & Weddings, Real Estate & Marketing... you name it!
-                    </p>
-                </div>
-            </div>
-            
-            <!-- IMAGE RIGHT -->
-            <div class="col-md-6 d-flex">
-                <div class="media-container">
-                    <img src="images/GalleryFamily/Family-1.avif" alt="Family Session">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end service section -->
-
-
-  <!-- Specials Section -->
-  <section
-    class="team_section layout_padding"
-    id="specials"
-    style="--overlay-opacity:0.77; background-image: url('images/Specials/Specials\ Background-3.avif'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; color: #fff;"
-  >
-    <!-- Adjustable semi-transparent overlay:
-         change the opacity by editing --overlay-opacity (0.0 to 1.0) -->
-    <div
-      class="specials-overlay"
-      style="position: absolute; inset: 0; background: rgba(0,0,0,var(--overlay-opacity)); pointer-events: none;"
-      aria-hidden="true"
-    ></div>
-
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="heading_container heading_center">
-        <h2 class="smaller">
-        <span style="color: #ff0033;"> PROFESSIONAL PHOTO SESSIONS</span><br />
-        </h2>
-      </div>
-      <div class="bottom-text-box text-center p-5">
-        <div class="container">
-          <div class="row no-gutters bottom-row2 flex-fill d-flex align-items-center justify-content-center text-center">
-            <div class="col-12 col-md-10 px-4">
-              <p class="lead">
-                40 minutes Session <br />
-                10 Edited Hi-Res Digital Files <br />
-                $120 <br />
-              </p>
-            </div>
-          </div>
-          <div class="btn-box">
-            <a href="sms:17027634020" class="btn-3" target="_blank" rel="noopener">
-              Book now!
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Specials section -->
-
+  <!-- YouTube Section -->
 
 <!-- Gallery section -->
 
