@@ -19,25 +19,6 @@ addPad{
   padding-top: 45px;
 }
 
-.video-background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.video-background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: -1;
-}
-
-
 .container-fluid,
 .row {
   margin: 0;
@@ -140,18 +121,6 @@ addPad{
   position: relative;
 }
 
-.hero_bg_box .img-box video {
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  pointer-events: none;
-}
 
 .hero_bg_box::before {
   content: "";
