@@ -114,51 +114,15 @@
 
 
 <body>
-  
-<!-- ============================================
-     HERO BACKGROUND CONTROLS — Edit here only
-     shade: 0.0 = no shade | 1.0 = full black
-     top: adjust vertical position of image
-============================================ -->
-<style>
-  :root {
-    --hero-shade: 0.5;
-    --hero-image: url('images/DesertBackground.jpg');
-    --hero-image-position: center center;
-    --hero-image-size: cover;
-  }
+  <!-- (Remove the video element from here; it will be placed inside #heroVideoContainer below) -->
 
-  .hero_bg_box .img-box img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: var(--hero-image-size);
-    object-position: var(--hero-image-position);
-  }
-
-  .hero_bg_box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, var(--hero-shade));
-    z-index: 1;
-  }
-</style>
-
-<!-- Hero Section Background -->
-<div class="hero_area">
-  <div class="hero_bg_box">
-    <div class="img-box">
-      <img src="images/DesertBackground.avif" alt="Desert Background">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="hero_bg_box">
+      <div class="img-box" id="heroVideoContainer">
+        <video id="mainVideo" src="images/HeadVideo2.mp4" autoplay muted loop playsinline preload="metadata" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="></video>
+      </div>
     </div>
-  </div>
-<!-- ENDS - Hero Section Background -->
 
 <!-- Floating clock icon -->
 <a href="#home" class="scroll-to-top" title="Go to Home">
