@@ -1,8 +1,9 @@
 BEGIN:VCARD
 VERSION:3.0
 PRODID:-//Apple Inc.//macOS 13.4//EN
-N:;Jesh Production;;;
+N:;;;;
 FN:Jesh Production
+ORG:Jesh Production;
 item1.EMAIL;type=INTERNET;type=pref:info@jeshproduction.com
 item1.X-ABLabel:Email
 item2.TEL;type=pref:(702) 763-4020
@@ -10851,4 +10852,5 @@ PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAkACQAAD/4QB0RXhpZgAATU0AKgAA
  lhx8p/pTdHmtZrx7WCTep6cEdia4qktTdHqcc4S1WFPuAGudRv3siL0OKq/2kYLd7RvvjHP459
  KjgYxIhfktmsnVudBsxpuzuNYkz+VcfLWpbT+fkLVGSDE+T3rO9wNhppFPmJUMOoSSy4bj/P0q
  za28nlYao59OeNfMSgCnqY3PlOf8iqFirGTDClmnMRJemWF8ss2FoA//2Q==
+X-ABShowAs:COMPANY
 END:VCARD
