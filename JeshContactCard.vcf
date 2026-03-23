@@ -3,14 +3,16 @@ VERSION:3.0
 PRODID:-//Apple Inc.//macOS 13.4//EN
 N:;Jesh Production;;;
 FN:Jesh Production
-EMAIL;type=INTERNET;type=WORK;type=pref:info@jeshproduction.com
-TEL;type=CELL;type=VOICE;type=pref:(702) 763-4020
-item1.URL;type=pref:www.jeshproduction.com
-item1.X-ABLabel:Website
-item2.URL:https://www.facebook.com/jeshproduction
-item2.X-ABLabel:Facebook
-item3.URL:https://www.instagram.com/jeshproduction/
-item3.X-ABLabel:Instagram
+item1.EMAIL;type=INTERNET;type=pref:info@jeshproduction.com
+item1.X-ABLabel:Email
+item2.TEL;type=pref:(702) 763-4020
+item2.X-ABLabel:Call & Text
+item3.URL;type=pref:www.jeshproduction.com
+item3.X-ABLabel:Website
+item4.URL:https://www.facebook.com/jeshproduction
+item4.X-ABLabel:Facebook
+item5.URL:https://www.instagram.com/jeshproduction/
+item5.X-ABLabel:Instagram
 PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAAkACQAAD/4QB0RXhpZgAATU0AKgAA
  AAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAA
  AAAACQAAAAAQAAAJAAAAABAAKgAgAEAAAAAQAACACgAwAEAAAAAQAACAAAAAAA/+0AOFBob3Rv
