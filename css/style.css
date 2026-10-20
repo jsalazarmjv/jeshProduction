@@ -3,7 +3,6 @@
 :root {
   --brand-red: #ee3340;     /* replace with your site's exact red */
   --brand-black: #0d0d0d;
-  --divider: #0d0d0d;       /* black middle line */
 }
 
 .about-stats,
@@ -25,8 +24,8 @@
 /* Divider: horizontal on mobile, vertical on desktop */
 .stat-right {
   border-top: 2px solid var(--divider);
-  margin-top: 16px;
-  padding-top: 32px;
+  margin-top: 2px;
+  padding-top: 2px;
 }
 @media (min-width: 768px) {
   .stat-right {
