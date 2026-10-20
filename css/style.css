@@ -1,4 +1,155 @@
 
+/* ===== About stats (12 years + Google rating) ===== */
+:root {
+  --brand-red: #ee3340;     /* replace with your site's exact red */
+  --brand-black: #0d0d0d;
+  --divider: #0d0d0d;       /* black middle line */
+}
+
+.about-stats,
+.about-stats .stat-col {
+  font-family: 'Poppins', sans-serif;   /* replace if your site uses another font */
+}
+
+.about-stats { padding: 40px 0; }
+
+.stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+/* Divider: horizontal on mobile, vertical on desktop */
+.stat-right {
+  border-top: 2px solid var(--divider);
+  margin-top: 16px;
+  padding-top: 32px;
+}
+@media (min-width: 768px) {
+  .stat-right {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 24px;
+    border-left: 3px solid var(--divider);
+  }
+}
+
+/* ----- Left side ----- */
+.stat-number {
+  font-size: clamp(5rem, 11vw, 9rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--brand-red);
+  letter-spacing: -0.03em;
+}
+
+.stat-years {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  padding-left: 0.1em;
+  color: var(--brand-black);
+}
+
+.stat-sub {
+  font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--brand-black);
+  margin-top: 8px;
+}
+
+/* ----- Right side ----- */
+.google-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.google-stars { display: flex; gap: 4px; }
+
+.google-stars svg {
+  width: 38px;
+  height: 38px;
+  fill: #fbbc04;
+  filter: drop-shadow(0 0 6px rgba(251, 188, 4, 0.45));
+  opacity: 0;
+  transform: scale(0.4) rotate(-20deg);
+  animation: starPop 0.5s ease-out forwards;
+}
+
+.google-stars svg:nth-child(1) { animation-delay: 0.10s; }
+.google-stars svg:nth-child(2) { animation-delay: 0.20s; }
+.google-stars svg:nth-child(3) { animation-delay: 0.30s; }
+.google-stars svg:nth-child(4) { animation-delay: 0.40s; }
+.google-stars svg:nth-child(5) { animation-delay: 0.50s; }
+
+@keyframes starPop {
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+.rating-number {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-black);
+}
+
+/* ----- Clickable right side ----- */
+.stat-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.stat-link:hover,
+.stat-link:focus-visible {
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-3px);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.stat-link:focus-visible {
+  outline: 3px solid var(--brand-black);
+  outline-offset: -3px;
+}
+
+.stat-link:active { transform: translateY(0); }
+
+/* Smooth scroll to the reviews section */
+html { scroll-behavior: smooth; }
+#reviews { scroll-margin-top: 80px; }   /* match your section id and header height */
+
+/* ----- Phones ----- */
+@media (max-width: 576px) {
+  .google-logo { height: 48px; }
+  .google-stars svg { width: 30px; height: 30px; }
+}
+
+/* ----- Reduced motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  .google-stars svg { animation: none; opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+  .stat-link { transition: none; }
+}
+/* ===== About stats (12 years + Google rating) ===== */
+
 
 body {
   font-family: "Poppins", sans-serif;
